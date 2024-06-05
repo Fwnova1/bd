@@ -985,20 +985,30 @@ body {
   animation-play-state: paused !important;
 }
 
-.message-box {
+.text-box-container {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 300px;
-  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeInText 5s forwards; /* Adjust the duration as needed */
+}
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: pink;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  color: #FF69B4; /* Pink-ish color */
 }
 
-.message-box p {
-  margin: 0;
-  padding: 0 0 10px 0;
+@keyframes fadeInText {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
+
 /*# sourceMappingURL=style.css.map */
